@@ -1,8 +1,51 @@
-/*
+/* .metadata-properties 요소에 yaml-panel-plus-props-container 클래스가 추가되었을 때 하위 요소에 적용 */
+.yaml-panel-plus-props-container .hide-property-element {
+	display: none !important; /* 숨김 처리 */
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+/* 속성 이름 숨김 (아이콘은 유지) */
+.yaml-panel-plus-props-container.yaml-panel-plus-names-hidden
+	.metadata-property
+	.metadata-property-key
+	.metadata-property-key-text,
+.yaml-panel-plus-props-container.yaml-panel-plus-names-hidden
+	.metadata-property
+	.metadata-property-key
+	input.metadata-property-key-input {
+	display: none !important;
+}
 
-If your plugin does not need CSS, delete this file.
+.yaml-panel-plus-props-container.yaml-panel-plus-names-hidden
+	.metadata-property {
+	border-bottom: var(--metadata-divider-width) solid
+		var(--metadata-divider-color);
+	flex-wrap: nowrap; /* 줄바꿈 방지 */
+}
 
-*/
+.yaml-panel-plus-props-container.yaml-panel-plus-names-hidden
+	.metadata-property
+	.metadata-property-key {
+	width: 20px !important; /* 속성 이름이 숨김 처리되면 width를 조정해주어야지 크기가 줄어듬 */
+	min-width: 20px !important; /* 최소 너비를 설정하여 너무 작아지지 않도록 함 */
+	border-bottom: none; /* 밑줄 제거 */
+}
+
+.yaml-panel-plus-props-container.yaml-panel-plus-names-hidden
+	.metadata-property
+	.metadata-property-value {
+	padding-inline-start: 0px; /* 속성 값의 왼쪽 패딩을 제거 */
+	border-bottom: none; /* 밑줄 제거 */
+	margin-top: 0px; /* 위쪽 여백 제거 */
+}
+
+.yaml-panel-plus-custom-svg-wrapper {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 커스텀 아이콘 스타일 */
+.metadata-property .yaml-panel-plus-custom-icon > svg {
+	display: none; /* 기존 SVG 숨기기 */
+}
