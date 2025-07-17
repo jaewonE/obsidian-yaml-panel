@@ -1,13 +1,15 @@
 # YAML Panel
 
+![Thumbnail](https://raw.githubusercontent.com/jaewonE/obsidian-yaml-panel/refs/heads/master/assets/sample.png)
+
 A streamlined Obsidian plugin that displays the YAML frontmatter of your active file in a dedicated panel. The panel automatically hides property names when space is limited and lets you assign custom SVG icons for specific keys.
 
 ## Features
 
-- Shows YAML properties in a separate panel for quick reference.
-- Automatically hides property names below a user-defined width threshold.
-- Supports custom property icons via SVG snippets.
-- Settings tab for adjusting threshold and icon assignments.
+-   Shows YAML properties in a separate panel for quick reference.
+-   Automatically hides property names below a user-defined width threshold.
+-   Supports custom property icons via SVG snippets.
+-   Settings tab for adjusting threshold and icon assignments.
 
 ## Installation
 
@@ -27,8 +29,8 @@ npm run build      # production build
 
 ## Settings
 
-- **Name hiding threshold** – width in pixels before property names are hidden.
-- **Custom property icons** – specify property names and SVG code to display instead of the default icon.
+-   **Name hiding threshold** – width in pixels before property names are hidden.
+-   **Custom property icons** – specify property names and SVG code to display instead of the default icon.
 
 Sample icons are provided in the `icon-samples` folder.
 
